@@ -42,35 +42,71 @@ Il s'agit de la variable d'environment `'$HOME'` qui nous permet cela.
  
  - **SHELL** : interpréteur de commande préféré de l'utilisateur tel qu'il est défini dans le fichier « /etc/passwd » .
  
- - **_** :
+ - **_** : La dernière commande saisie par l'utilisateur connecté
  
  &nbsp;
  
  **4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.**
  
+ ```bash
+MY_VAR=test
+echo $MY_VAR
+test
+```
+ 
  &nbsp;
  
 **5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.**
+
+Lorsque nous faisons cela, nous ouvrons une nouvelle session shell donc les variables sont réinitialisées.
+La variable *MY_VAR* n'existe donc pas dans cette session shell.
 
 &nbsp;
 
 **6. Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.**
 
+```bash
+export MY_VAR=test
+```
+La variable MY_VAR est désormait une variable d'environnement, Elle sera donc valide sur tous les shells tant que le shell créateur n'est pas fermée.
+
 &nbsp;
 
 **7. Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.**
+
+```bash
+export NOMS='BIARD MARION'
+printenv NOMS
+BIARD MARION
+```
 
 &nbsp;
 
 **8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**
 
+```bash
+echo "Bonjour à vous deux, $NOMS !"
+```
+En retour, nous avons :
+`Bonjour à vous deux, BIARD MARION !`
+
 &nbsp;
 
 **9. Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande unset ?**
 
+Si la valeur est vide, la variable reste définie et peut donc être utilisée et modifiée mais elle est vide.
+
+Avec la commande unset, la variable sera totalement supprimée de la mémoire du shell. En cas de lecture, cela générera une erreur.
+
 &nbsp;
 
 **10. Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)**
+
+Il suffit de taper dans la ligne de commande :
+
+```bash
+echo "\$HOME=$HOME"
+```
 
 &nbsp;
 ****
