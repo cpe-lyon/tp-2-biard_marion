@@ -24,9 +24,9 @@ On peut afficher ces répertoires avec la commande :`'printenv PATH'`.
 **2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans
 votre répertoire personnel ?**
 
-Il s'agit de la variable d'environment `'$HOME'` qui nous permet cela.
+Il s'agit de la variable d'environment `'$HOME'` qui permet cela.
 
-> Quand nous éxecutons `'cd'`, cela équivaut à éxecuter `'cd $HOME'`
+> Quand nous exécutons `'cd'`, cela équivaut à exécuter `'cd $HOME'`
 
 &nbsp;
 
@@ -38,7 +38,7 @@ Il s'agit de la variable d'environment `'$HOME'` qui nous permet cela.
  - **PWD** : contient le répertoire de travail courant de l'interpréteur de commande.
  
  - **OLDPWD** : contient le répertoire précédent.
- > Celui vers lequel nous retournons en éxecutant `'cd -'`.
+ > Celui vers lequel nous retournons en exécutant `'cd -'`.
  
  - **SHELL** : interpréteur de commande préféré de l'utilisateur tel qu'il est défini dans le fichier « /etc/passwd » .
  
@@ -68,7 +68,7 @@ La variable *MY_VAR* n'existe donc pas dans cette session shell.
 ```bash
 export MY_VAR=test
 ```
-La variable MY_VAR est désormait une variable d'environnement, Elle sera donc valide sur tous les shells tant que le shell créateur n'est pas fermée.
+La variable MY_VAR est désormais une variable d'environnement. Elle sera donc valide sur tous les shells tant que le shell créateur n'est pas fermé.
 
 &nbsp;
 
